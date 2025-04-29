@@ -13,21 +13,21 @@ const projects = [
     description:
       "A fully functional e-commerce platform tailored for anime fans, designed to showcase and sell a wide range of anime-themed products such as apparel, collectibles, posters, and accessories.",
     image: anibuy,
-    githubLink: "https://github.com/yourusername/anibuy",
+    githubLink: "https://github.com/Codename-satyam/AniBuy.io",
   },
   {
     title: "QuickPick",
     description:
       "A user-centric web application designed to streamline the online ordering and delivery of fresh vegetables and essential kitchen supplies. Built to simplify grocery shopping with a clean and intuitive interface for all users..",
     image: quick,
-    githubLink: "https://github.com/yourusername/quickpick",
+    githubLink: "https://github.com/Codename-satyam/Quickpick",
   },
   {
     title: "Web_Name",
     description:
       "An engaging and educational web application designed to help children assess and enhance their cognitive abilities through fun aptitude and IQ tests. Developed with Laravel to ensure robust backend functionality and smooth user experience.",
     image: web_name,
-    githubLink: "https://github.com/yourusername/web_name",
+    githubLink: "Not deployed on any platform yet",
   },
 ];
 
