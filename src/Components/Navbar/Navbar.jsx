@@ -1,23 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 
-function app() {
+function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="main-nav">
       <div className="Logo">
-        {/* <img src="https://via.placeholder.com/150" alt="Logo" /> */}
         <h1>Satyam.Anand</h1>
       </div>
-      <div className="Nav">
+
+      <div className={`Nav ${menuOpen ? "active" : ""}`}>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#about">Profile</a>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
+          <a href="#home">Home</a>
+          <a href="#about">Profile</a>
+          <a href="#contact">Contact</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
         </nav>
+      </div>
+
+      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        ☰
       </div>
     </div>
   );
 }
-export default app;
+
+export default Navbar;
