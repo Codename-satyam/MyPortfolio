@@ -1,0 +1,157 @@
+body {
+  background-color: #191919;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.4);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  overflow: hidden;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.projects-heading {
+  font-size: 40px;
+  margin-bottom: 60px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #0ea5e9;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1s forwards;
+}
+
+.project-item:nth-child(even) {
+  animation-delay: 0.3s;
+}
+.project-item:nth-child(odd) {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-image {
+  cursor: pointer;
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.7);
+}
+
+.project-content {
+  cursor: pointer;
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  color: #e0f2fe;
+  transition: transform 0.3s ease;
+}
+
+.project-content:hover {
+  transform: scale(1.02);
+}
+
+.project-content h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.project-content p {
+  font-size: 16px;
+  color: #bae6fd;
+  line-height: 1.6;
+}
+
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #24292e;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: "Orbitron", sans-serif;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+}
+
+.github-btn:hover {
+  background-color: #000;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .project-item,
+  .project-item.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-content {
+    text-align: center;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,151 @@
+.master-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a);
+  font-family: "Orbitron", sans-serif;
+  padding: 40px 20px;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  padding: 40px 30px;
+  margin-top: 50px;
+  margin-bottom: 90px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.skills-heading {
+  color: #ffffff;
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #1da1f2;
+  animation: fadeInDown 1s ease;
+}
+
+.skills-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 18px 22px;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  width: 130px;
+  backdrop-filter: blur(4px);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-item::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: rotate(45deg);
+  animation: shine 2.5s infinite linear;
+  pointer-events: none;
+}
+
+.skill-item:hover {
+  background-color: #ffffff;
+  color: #000;
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  z-index: 2;
+}
+
+.skill-icon svg {
+  font-size: 34px;
+}
+
+.skill-name {
+  font-size: 14px;
+  text-align: center;
+}
+
+@keyframes shine {
+  0% {
+    transform: rotate(45deg) translate(-100%, -100%);
+  }
+  100% {
+    transform: rotate(45deg) translate(100%, 100%);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skill-item {
+    font-size: 14px;
+    padding: 14px 18px;
+    width: 100px;
+  }
+
+  .box2 {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .skills-heading {
+    font-size: 26px;
+  }
+}
